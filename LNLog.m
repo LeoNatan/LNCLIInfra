@@ -1,15 +1,15 @@
 //
 //  LNLog.m
-//  ObjCCLIInfra
+//  LNCLIInfra
 //
-//  Created by Leo Natan (Wix) on 13/07/2017.
-//  Copyright © 2017 Wix. All rights reserved.
+//  Created by Leo Natan on 13/07/2017.
+//  Copyright © 2017-2021 Leo Natan. All rights reserved.
 //
 
 #import "LNLog.h"
-#import "DTXLogging.h"
+#import "LNLogging.h"
 
-DTX_CREATE_LOG(CLI)
+LN_CREATE_LOG(CLI)
 
 void LNLog(LNLogLevel logLevel, NSString* format, ...)
 {
@@ -43,7 +43,7 @@ void LNLog(LNLogLevel logLevel, NSString* format, ...)
 		NSNumber* osLogType = logToLogMapping[@(logLevel)];
 		if(osLogType)
 		{
-			__dtx_log(__prepare_and_return_file_log(), osLogType.unsignedIntegerValue, @"", @"%@", message);
+			__ln_log(__prepare_and_return_file_log(), osLogType.unsignedIntegerValue, @"", @"%@", message);
 		}
 	}
 }

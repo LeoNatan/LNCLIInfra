@@ -1,9 +1,9 @@
 //
 //  LNOptionsParser.swift
-//  DetoxRecorderCLI
+//  LNCLIInfra
 //
-//  Created by Leo Natan (Wix) on 5/27/20.
-//  Copyright © 2020 Wix. All rights reserved.
+//  Created by Leo Natan on 5/27/20.
+//  Copyright © 2017-2021 Leo Natan. All rights reserved.
 //
 
 import Foundation
